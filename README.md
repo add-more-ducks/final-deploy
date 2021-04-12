@@ -1,3 +1,5 @@
+# Thomas van Genderen Spring 2021 
+
 # The Past in Perspective / Het verleden in beeld
 
 The idea of this site is to bring history into perspective. I envision the user selecting a year in time and seeing the technology, economy, government etc. of that year. 
