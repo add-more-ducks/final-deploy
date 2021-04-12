@@ -30,5 +30,28 @@ Do make sure that you use realistic content in your sketches! Google a few image
 
 ] 
 
-
 # Don't forget to update README.md !!!
+
+## Features
+
+Include a brief list of main features that will be available to users. All features should also be visible in the sketch. If you have complicated features, it might be good to create a separate sketch for each feature. Yes, you will do a lot of sketching! This is required.
+
+- Scraping data from Wikipedia.
+- Selecting filters for events.
+- Building a timeline based on filters.
+- Storing Wikipedia data in SQL database.
+- Zoom feature on timeline scope.
+- Selecting events on timeline brings up extensive information and link to article.
+
+
+
+Mark which features define the minimum viable product (MVP) and which parts may be optional to implement. An MVP has a minimum amount of features, but is still a good product. This is the part that you have to agree on/negotiate with your teacher before starting to code!
+
+MVP:
+I. Stores data in SQL database.
+II. Transports database data to a google spreadsheets file
+III. Displays spreadsheets data as interactive timeline.
+
+
+![User interactability](doc/Interactie.png)
+![Database design](doc/UML-klassendiagram.png)
