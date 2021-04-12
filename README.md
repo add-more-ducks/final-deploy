@@ -5,13 +5,9 @@
 The idea of this site is to bring history into perspective. I envision the user selecting a year in time and seeing the technology, economy, government etc. of that year. 
 The data will be scraped from Wikipedia and displayed on the site. the user will be able to select an object and navigate to its Wikipedia page.
 
-Deze applicatie dient als een globaal overzicht van de geschiedenis van Nederland. Het eindproduct zal de gebruiker filters in laten stellen op op basis daarvan een interactieve tijdsbalk weergeven. De meeste data zal komen van het 'scrapen' van Wikipedia. Een gebruiker moet vanaf de site naar relevante Wikipedia artikelen navigeren.
-
 ## Problem statement
 
 History is traditionally taught as a series of facts with dates, but context and contemporary events are often disregarded. I want to gather these loose facts on an intuitive timeline that gives a more holistic of overview of history. Sites like http://histography.io/ are rare and often too global (or too narrow like http://www.tiki-toki.com/timeline/entry/585659/Holocaust-in-Europa/ and https://www.kolonienvanweldadigheid.eu/tijdlijn/. They focus of specific periods of history). The target audience will be those interested in Dutch history with a need of context to complement general facts and figures.
-
-In het nederlandse schoolsysteem wordt de geschiedenis aangeleerd in de vorm van periodes en feiten. Het nadeel van deze aanpak is, dat de blik op de geschiedenis het geheel uit het oog verliest. Door de gebeurtenissen en personen op een interactieve tijdsbalk weer te geven zal er een holistischer beeld beschikbaar zijn. Webites zoals http://histography.io/ zijn relatief zeldzaam en erg globaal. 
 
 The target audience will be those interested in Dutch history with a need of context to complement general facts and figures.
 
@@ -28,7 +24,7 @@ Scraped from Wikipedia will be an URL, picture, summary, dates, names, and possi
 
 The database will be created and interacted with with the use of __SQLAlchemy__
 
-The tool for the JS interactive timeline will be __chartJS__ or __TimelineJS__
+The tool for the JS interactive timeline will be __TimelineJS__
 
 __pandas__ is probably needed for the data analysis.
 
