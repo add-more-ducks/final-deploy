@@ -44,7 +44,7 @@ Include a brief list of main features that will be available to users. All featu
 
 The projects main aim is to provide a platform for a easy, holistic and chronological display of historical events for its users. The aim is to provide a way to enter data into a database with a standardised format, then aorder that data in a chronological order, after which it is displayed to the user while taking the assigned type of the data in regard.
 
-### Main Features 
+### Main features 
 - Manual entry of items to be displayed
 - Scraping data from Wikipedia (and other sites).
 - Selecting filters for events.
@@ -56,6 +56,25 @@ The projects main aim is to provide a platform for a easy, holistic and chronolo
 - Data exchange between SQL database and Google Spreadsheet file(s). (MVP)
 - Spreadsheet data is displayed to user on a highly interactive timeline. (MVP)
 
+## User interface
 ![User interactability](doc/Interactie.png)
-![Database design old](doc/UML-klassendiagram.png)
+Still needs work
+
+## Database
+Design:
 ![Database design](doc/UML-Class_Diagram.jpeg)
+
+Example:
+![Database example](doc/UML-Class_Example.png)
+
+## Lists
+
+Scraped from Wikipedia will be an URL, picture, summary, dates, names, and possibly more with the use of __BeautifulSoup4__
+
+The database will be created and interacted with with the use of __SQLAlchemy__
+
+The tool for the JS interactive timeline will be __TimelineJS__
+
+__pandas__ is probably needed for the data analysis.
+
+__LXML__ as a parser.
