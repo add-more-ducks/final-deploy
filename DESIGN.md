@@ -27,6 +27,12 @@ You must create “professional” drawings using a software tool. Some examples
 
 Do make sure that you use realistic content in your sketches! Google a few images, write real texts and make sure it gives a good impression of what you want to make.
 
+Lists
+Include a couple of lists that are more detailed than in your proposal document:
+
+a list of APIs and frameworks or plugins that you will be using to provide functionality in your app (and explain exactly what features you’re using them for)
+
+a list of data sources if you will get data from an external source, including information on how your are going to filter and transform the data for your project, with examples of raw data and the actual data you need
 
 ] 
 
@@ -36,9 +42,11 @@ Do make sure that you use realistic content in your sketches! Google a few image
 
 Include a brief list of main features that will be available to users. All features should also be visible in the sketch. If you have complicated features, it might be good to create a separate sketch for each feature. Yes, you will do a lot of sketching! This is required.
 
+The projects main aim is to provide a platform for a easy, holistic and chronological display of historical events for its users. The aim is to provide a way to enter data into a database with a standardised format, then aorder that data in a chronological order, after which it is displayed to the user while taking the assigned type of the data in regard.
+
 ### Main Features 
 - Manual entry of items to be displayed
-- Scraping data from Wikipedia.
+- Scraping data from Wikipedia (and other sites).
 - Selecting filters for events.
 - Building a timeline based on filters.
 - Storing Wikipedia data in SQL database.
@@ -50,3 +58,4 @@ Include a brief list of main features that will be available to users. All featu
 
 ![User interactability](doc/Interactie.png)
 ![Database design](doc/UML-klassendiagram.png)
+![Database design](doc/UML-ClassDiagram.jpeg)
