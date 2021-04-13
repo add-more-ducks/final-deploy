@@ -58,4 +58,4 @@ The projects main aim is to provide a platform for a easy, holistic and chronolo
 
 ![User interactability](doc/Interactie.png)
 ![Database design](doc/UML-klassendiagram.png)
-![Database design](doc/UML-ClassDiagram.jpeg)
+![Database design](doc\UML-Class_Diagram.jpeg)
