@@ -57,14 +57,21 @@ The projects main aim is to provide a platform for a easy, holistic and chronolo
 - Spreadsheet data is displayed to user on a highly interactive timeline. (MVP)
 
 ## User interface
-![User interactability](doc/Interactie.png)
+![User interactability](doc/Interaction_Design_1.png)
 Still needs work
+
+![Welcome page](doc/Welcome_page_2.png)
+
+![Timeline page](doc/Timeline_page_2.png)
+
 
 ## Database
 Design:
+
 ![Database design](doc/UML-Class_Diagram.jpeg)
 
 Example:
+
 ![Database example](doc/UML-Class_Example.png)
 
 ## Lists
