@@ -37,13 +37,7 @@ Example
 ![Database example](doc/UML-Class_Example.png)
 
 ## Lists
-
-Include a couple of lists that are more detailed than in your proposal document:
-
-a list of APIs and frameworks or plugins that you will be using to provide functionality in your app (and explain exactly what features you’re using them for)
-
-a list of data sources if you will get data from an external source, including information on how your are going to filter and transform the data for your project, with examples of raw data and the actual data you need
-
+Required for this project will be:
 
 Scraped from Wikipedia will be an URL, picture, summary, dates, names, and possibly more with the use of __BeautifulSoup4__
 
