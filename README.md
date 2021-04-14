@@ -17,8 +17,8 @@ The application will be a site that displays which events took place in the same
 
 ## Details and sketches
 
-![Welcome page for the frontend](doc/Welcome_page.png)
-![Mainpage eith timeline](doc/Timeline_page.png)
+![Welcome page for the frontend](doc/Welcome_pag_2_.png)
+![Mainpage eith timeline](doc/Timeline_page_2.png)
 
 Scraped from Wikipedia will be an URL, picture, summary, dates, names, and possibly more with the use of __BeautifulSoup4__
 
