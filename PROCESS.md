@@ -8,3 +8,8 @@ Today I will try to contact the TA's again.
 - What you expect to happen as a result of that choice (at this moment in time)
 - Why you expect things to pan out that way
 
+# 19 April
+
+Need to decide what I add to increase the complexity and depth to my design doc.
+- No decision has yet been taken. Tomorrow I will try again.
+- Some unneccessary elements have been trimmed from the design document.

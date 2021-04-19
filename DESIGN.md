@@ -9,8 +9,8 @@ The projects main aim is to provide a platform for a easy, holistic and chronolo
 ### Main features 
 - Manual entry of items to be displayed
 - Scraping data from Wikipedia (and other sites).
-- Selecting filters for events.
-- Building a timeline based on filters.
+- Selecting filters for types on events. (government, art, religion, royalty, science, warfare, etc.)
+- Building a timeline based on the above mentioned filters.
 - Storing Wikipedia data in SQL database.
 - Zoom feature on timeline scope.
 - Selecting events on timeline brings up extensive information and link to article.
@@ -37,17 +37,11 @@ Example
 ![Database example](doc/UML-Class_Example.png)
 
 ## Lists
-Required for this project will be:
+### Required for this project will be:
 
 Scraped from Wikipedia will be an URL, picture, summary, dates, names, and possibly more with the use of __BeautifulSoup4__
 
-The database will be created and interacted with with the use of __SQLAlchemy__
+The tool for the JS interactive timeline will be __TimelineJS__. It is very interactive and easy to input data to.
 
-The tool for the JS interactive timeline will be __TimelineJS__
-
-__pandas__ is probably needed for the data analysis.
-
-__LXML__ as a parser.
-
-__Google spreadsheet__ will be one of the main data repositories in a csv format.
+__Google spreadsheet__ will be one of the main data repositories in a csv format. Google spreadsheets can store an online accesable .csv file which houses the data that __TimelineJS__ uses to construct a timeline. It is also a useful format as it is easy to edit.
 

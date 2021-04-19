@@ -2,14 +2,12 @@
 
 # The Past in Perspective
 
-The idea of this site is to bring history into perspective. I envision the user selecting a year in time and seeing the technology, economy, government etc. of that year. 
-The data will be scraped from Wikipedia and displayed on the site. the user will be able to select an object and navigate to its Wikipedia page.
+The idea of this site is to bring history into perspective. I envision the user navigating to a year in time and seeing the technology, economy, government etc. of that year. 
+The data could be scraped from Wikipedia and displayed on the site. the user will be able to select an object and navigate to its Wikipedia page.
 
 ## Problem statement
 
 History is traditionally taught as a series of facts with dates, but context and contemporary events are often disregarded. I want to gather these loose facts on an intuitive timeline that gives a more holistic of overview of history. Sites like http://histography.io/ are rare and often too global (or too narrow like http://www.tiki-toki.com/timeline/entry/585659/Holocaust-in-Europa/ and https://www.kolonienvanweldadigheid.eu/tijdlijn/. They focus of specific periods of history). The target audience will be those interested in Dutch history with a need of context to complement general facts and figures.
-
-The target audience will be those interested in Dutch history with a need of context to complement general facts and figures.
 
 ## Solution description
 
@@ -39,7 +37,9 @@ The scraped data is not guaranteed to be consistent in composition. The database
 
 The mainpage will be fully interactable and will link to different Wikipedia pages. It needs to be created automaticaly based on the database. This will require a lot of JS integration. (A good example is https://www.kaapskil.nl/ontdek/400-jaar-skil/)
 
+(
 install requirements:
 beautifulsoup4
 lxml
 requests
+)
