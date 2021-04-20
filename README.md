@@ -24,9 +24,6 @@ The database will be created and interacted with with the use of __SQLAlchemy__
 
 The tool for the JS interactive timeline will be __TimelineJS__
 
-__pandas__ is probably needed for the data analysis.
-
-__LXML__ as a parser.
 
 
 Challenges:  
@@ -43,3 +40,11 @@ beautifulsoup4
 lxml
 requests
 )
+
+# ideas for more complexity:
+- User interaction /  commenting
+- web scraping (hard)
+- better filter system
+- opening new windows with a more detailed database for each topic?
+- admin control over what is added/commented?
+- 
