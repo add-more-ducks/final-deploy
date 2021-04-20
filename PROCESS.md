@@ -13,3 +13,9 @@ Today I will try to contact the TA's again.
 Need to decide what I add to increase the complexity and depth to my design doc.
 - No decision has yet been taken. Tomorrow I will try again.
 - Some unneccessary elements have been trimmed from the design document.
+
+# 20 April
+
+- Started adding new ideas to the design of the application.
+-   User input for items
+-   Admin validation of users.

@@ -11,8 +11,13 @@ History is traditionally taught as a series of facts with dates, but context and
 
 ## Solution description
 
-The application will be a site that displays which events took place in the same year. It will scrape Wikipedia for events relevant to Dutch history into a SQL database. Data will then be displayed on an interactive representation of a timeline.
+The application will be a site that displays which events took place in the same year. Users fill in the data of events relevant to Dutch history into a SQL database. Data will then be displayed on an interactive representation of a timeline. The admin will validate the data provided by the users and when they 
 
+Seperate types of events will be displayed in marked rows, this way the users can see different developments that happened around the same time.
+
+Wikipedia is hard to scrap due to the lack of uniformity. Therefore the data will have to be entered manually. The admin will be able to enter items directly into the database. Users will have their first entries ratified by the admins and after a certain degree of reliability has been estabilished, they will be free to enter data directly. (Admins can still remove faulty data.)
+
+Afterwards the Admin would still need the capacity to police individual users for quality control.
 ## Details and sketches
 
 ![Welcome page for the frontend](doc/Welcome_page_2.png)
@@ -35,17 +40,14 @@ The scraped data is not guaranteed to be consistent in composition. The database
 
 The mainpage will be fully interactable and will link to different Wikipedia pages. It needs to be created automaticaly based on the database. This will require a lot of JS integration. (A good example is https://www.kaapskil.nl/ontdek/400-jaar-skil/)
 
-(
-install requirements:
-beautifulsoup4
-lxml
-requests
-)
-
 # ideas for more complexity:
 - User interaction /  commenting
 - web scraping (hard)
 - better filter system
 - opening new windows with a more detailed database for each topic?
 - admin control over what is added/commented?
-- 
+- locatie gebonden
+- inzoomen geeft meer detail
+- volledig door gebruikers laten invullen (3 item verificatie?)
+- doorklikken naar feitjespaginas
+- meerdere tijdlijnen onder elkaar hebben? (zelfde jaartal?)
