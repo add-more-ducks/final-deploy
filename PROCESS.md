@@ -19,3 +19,4 @@ Need to decide what I add to increase the complexity and depth to my design doc.
 - Started adding new ideas to the design of the application.
 -   User input for items
 -   Admin validation of users.
+This solves the problem of data extraction from wikipedia as it can be easily interpreted by users.
