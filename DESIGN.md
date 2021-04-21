@@ -24,18 +24,35 @@ Afterwards the Admin would still need the capacity to police individual users fo
 - Spreadsheet data is displayed to user on a highly interactive timeline. (MVP)
 - Items on timeline contain a link to source and optionally some media content.
 
+### Pages
+- Homepage: filter selection, User/Admin login, Links to all other pages, introduction text
+- Timeline page: A presentation of all items on an interactable timeline. Links to homepage and links to sources
+- Admin page: Statistics, User management (pop-ups), item management (pop-ups), Item submission (pop-ups), links to other pages. 
+- User page: Statistics, Profile pic, Personal item list (pop-ups), Item submission (pop-ups), links to other pages.
+- Instruction Page: Explanation and examples of how one submits items to add to the database.
+- About page: General site info and contact info
+- login popup
+
 ## User interface
+
 ![User interactability](doc/Interaction_Design_1.png)
 
 ![Welcome page](doc/Welcome_page_2.png)
 
 ![Timeline page](doc/Timeline_page_2.png)
+![Timeline design](doc/Final_Timeline_Page.png)
+![Login design](doc/Final_Login_Page.png)
+![Userpage design](doc/Final_User_Page.png)
+![Admin design](doc/Final_Admin_Page.png)
 
 
 ## Database
-Design for Database item
+Rough design for Database item
 
-![Database design](doc/Timeline_Item_UML.jpeg)
+The admin decides what submissions get added to the database and can later on delete items manually. 
+The admin can update the spreadsheet document to reflect the current state of the database and add/remove items to/from the timeline.
+
+![Database design](doc/Timeline_Item_UML.png)
 
 ## Lists
 ### Required for this project will be:
