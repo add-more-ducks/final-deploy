@@ -36,6 +36,7 @@ Afterwards the Admin would still need the capacity to police individual users fo
 ## User interface
 
 ![User interactability](doc/Interaction_Design_1.png)
+![User interactability 2](doc/Final_Interaction_Scheme.png)
 
 ![Welcome page](doc/Welcome_page_2.png)
 

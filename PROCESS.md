@@ -20,3 +20,6 @@ Need to decide what I add to increase the complexity and depth to my design doc.
 -   User input for items
 -   Admin validation of users.
 This solves the problem of data extraction from wikipedia as it can be easily interpreted by users.
+
+# 21 April
+- I chose to give the admin his own page from which most of the site-maintenance controls are accessible.
