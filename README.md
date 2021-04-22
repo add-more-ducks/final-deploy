@@ -51,3 +51,7 @@ The mainpage will be fully interactable and will link to different Wikipedia pag
 - volledig door gebruikers laten invullen (3 item verificatie?)
 - doorklikken naar feitjespaginas
 - meerdere tijdlijnen onder elkaar hebben? (zelfde jaartal?)
+
+# How to start
+
+$ cd Documents/MProg/final-add-more-ducks-1/final-add-more-ducks-1/app

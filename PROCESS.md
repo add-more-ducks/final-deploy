@@ -26,3 +26,10 @@ This solves the problem of data extraction from wikipedia as it can be easily in
 
 # 22 April
 I am faced with the choice of what to with the .csv file. The TimelineJS site advices to use google spreadsheets. I have found a possible way to forgo that external file and use a local .csv file. source: https://framagit.org/eduinfo/timelinejs-local/-/tree/master/public
+other option:
+https://timeline.knightlab.com/docs/instantiate-a-timeline.html
+https://www.geeksforgeeks.org/json-dumps-in-python/
+
+I will make it work via JSON, boorstrap and local files for the JS.
+
+Today I got the site running, but have not implemented any functions yet.

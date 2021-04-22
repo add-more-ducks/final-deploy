@@ -13,10 +13,12 @@ from flask_admin.contrib.sqla import ModelView
 from markupsafe import escape
 import os
 
+from models import *
+
 # Configure Flask App
 app = Flask(__name__)
 
-if not os.getenv("DATABSE_URL"):
+if not os.getenv("DATABASE_URL"):
     raise RuntimeError("DATABASE_URL is not set")
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
