@@ -23,3 +23,6 @@ This solves the problem of data extraction from wikipedia as it can be easily in
 
 # 21 April
 - I chose to give the admin his own page from which most of the site-maintenance controls are accessible.
+
+# 22 April
+I am faced with the choice of what to with the .csv file. The TimelineJS site advices to use google spreadsheets. I have found a possible way to forgo that external file and use a local .csv file. source: https://framagit.org/eduinfo/timelinejs-local/-/tree/master/public

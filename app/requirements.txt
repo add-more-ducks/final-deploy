@@ -1,0 +1,14 @@
+Flask
+Flask-Session
+psycopg2-binary
+SQLAlchemy
+requests
+flask-migrate
+werkzeug==0.16
+flask_login
+flask-admin
+flask-wtf
+flask_socketio
+gspread
+oauth2client.service_account
+pprint
