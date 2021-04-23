@@ -33,3 +33,6 @@ https://www.geeksforgeeks.org/json-dumps-in-python/
 I will make it work via JSON, boorstrap and local files for the JS.
 
 Today I got the site running, but have not implemented any functions yet.
+
+# 23 April
+I have dicided to make hosting the .csv locally the first priority. Afterwards i might try to run timelineJS completely local. 
