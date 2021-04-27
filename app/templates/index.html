@@ -34,6 +34,13 @@
             timeline = new TL.Timeline('timeline-embed',
             'https://docs.google.com/spreadsheets/d/1cWqQBZCkX9GpzFtxCWHoqFXCHg-ylTVUWlnrdYMzKUI/pubhtml');
         </script>
+        <!-- 3.2 -->
+        <script type="text/javascript">
+            // make_the_json() is some javascript function you've written
+            // which creates the appropriate JSON configuration
+            var timeline_json = make_the_json(); 
+            window.timeline = new TL.Timeline('timeline-embed', timeline_json);
+        </script>
     </body>
 
 </html>
