@@ -2,14 +2,12 @@
 <div id="timeline-embed">
     <div id="timeline"></div>
 </div>
-<!-- build:css //cdn.knightlab.com/libs/timeline3/%(cdn)s/css/timeline.css -->
-<link rel="stylesheet" href="/dist/css/fonts/font.knightlab.css">
-<!-- endbuild -->
-<!-- build:css //cdn.knightlab.com/libs/timeline3/%(cdn)s/css/timeline.css -->
-<link title="timeline-styles" rel="stylesheet" href="/dist/css/timeline.css">
-<!-- endbuild -->
+<!-- CSS-->
+<link title="timeline-styles" rel="stylesheet" 
+href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+
 <!-- build:js //cdn.knightlab.com/libs/timeline3/%(cdn)s/js/timeline-min.js -->
-<script src="/dist/js/timeline.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/timeline.js') }}"></script>
 <!-- endbuild -->
 <script>
     $(document).ready(function() {
