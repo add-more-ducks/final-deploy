@@ -12,8 +12,19 @@
 <script type="text/javascript">
     function make_the_json () {
             
-            const jsonData = { 
-                events: [
+            const jsonData = {
+                "title": {
+                    "media": {
+                    "url": "https://en.wikipedia.org/wiki/William_the_Silent",
+                    "caption": "William the Silent, was the main leader of the Dutch Revolt against the Spanish Habsburgs that set off the Eighty Years' War.",
+                    "credit": "<a href='https://upload.wikimedia.org/wikipedia/commons/4/46/WilliamOfOrange1580.jpg'>WilliamOfOrange1580.jpg</a>"
+                    },
+                    "text": {
+                    "headline": "Willem van Oranje<br/> 1533 - 1584",
+                    "text": "<p>A wealthy nobleman, William originally served the Habsburgs as a member of the court of Margaret of Parma, governor of the Spanish Netherlands. Unhappy with the centralisation of political power away from the local estates and with the Spanish persecution of Dutch Protestants, William joined the Dutch uprising and turned against his former masters. The most influential and politically capable of the rebels, he led the Dutch to several successes in the fight against the Spanish. Declared an outlaw by the Spanish king in 1580, he was assassinated by Balthasar Gérard (also written as Gerardts) in Delft in 1584.</p>"
+                    }
+                }, 
+                "events": [
                     {
                         "media": {
                         "url": "",
@@ -30,6 +41,63 @@
                         "text": "<p>After a lot of effort and frustration, I asked Kiara for elp and she found out how to feed JSON to the timeline.</p>"
                         }
                     },
+                    {
+                        "media": {
+                        "url": "",
+                        "caption": "",
+                        "credit": ""
+                        },
+                        "start_date": {
+                        "month": "",
+                        "day": "",
+                        "year": "2019"
+                        },
+                        "end_date": {
+                        "month": "",
+                        "day": "",
+                        "year": "2022"
+                        },
+                        "text": {
+                        "headline": "Start of Covid19",
+                        "text": ""
+                        }
+                    },
+                    {
+                        "media": {
+                        "url": "",
+                        "caption": "",
+                        "credit": "",
+                        "thumbnail": "",
+                        "alt": "",
+                        "title": "",
+                        "link": "",
+                        "link_target": ""
+                        },
+                        "start_date": {
+                        "year": "2019",
+                        "month": "",
+                        "day": "",
+                        "hour": "",
+                        "minute": "",
+                        "second": "",
+                        "millisecond": "",
+                        "display_date": ""
+                        },
+                        "end_date": {
+                        "year": "2020",
+                        "month": "",
+                        "day": "",
+                        "hour": "",
+                        "minute": "",
+                        "second": "",
+                        "millisecond": "",
+                        "display_date": ""
+                        },
+                        "text": {
+                        "headline": "Start of Covid19",
+                        "text": ""
+                        }
+                    }
                 ]
             };
         return jsonData;
@@ -38,6 +106,14 @@
 </script>
 
 <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
+<div class="container">
+    <div class="shadow-sm p-3 mb-5 bg-white rounded">
+        <div class="text-center">
+            <h1 class="display-1">Welcome to the Past in Perspective!</h1>
+        </div>
+    </div>
+</div>
 
 <div id='timeline-embed' style="width: 100%; height: 600px"></div>
 

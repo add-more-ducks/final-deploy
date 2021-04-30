@@ -47,3 +47,19 @@ I have a hard time deciding what to do. Hopefully i can discuss it with other st
 Should i work via google forms?
 
 Now I got embeded to work, but it can't find the json
+
+# 30 April
+After a week of indecisiveness, the descision to leave out the .csv aspect of the dataframe. A solution was found to hardcode a json input to display with TimelineJS.
+This is a monumental milestone as it opens up manypossibilities. 
+
+It calls for many changes to the current DESIGN.md file as I can make a more direct system now. I can work with just SQL and JSON to handle the data. The newdesign includes the following:
+- Events are all stored in the postgreSQL database
+- The title slide will be hardcoded by me
+- The users with userIDs will be stored in a table in the postgreSQL database
+- The userID will link users to their submissions
+- User submissions will be directly added to the postgreSQL database with a negative boolean value for 'permission to display'
+- User submissions will be directly added to that database via a Flask form
+- The Admin will be able to change the booleans for 'permission to display' and 'trust of user'
+- A function will take all these events from the postgreSQL database, translate them into JSON and a next function will diplay them.
+
+I added some code from a previous project as a start to the login system, but haven't finished it yet.
