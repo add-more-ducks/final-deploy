@@ -9,7 +9,7 @@ const csvData = {
   events: [],
 };
 
-d3.csv('/timeline-data.csv', (error, data) => {
+d3.csv('app/static/js/timeline-data.csv', (error, data) => {
   data.forEach((itemData) => {
         // reference for json format: https://timeline.knightlab.com/docs/json-format.html
         // inspired from https://github.com/NUKnightLab/TimelineJS3/blob/master/source/js/core/TL.ConfigFactory.js

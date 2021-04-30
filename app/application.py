@@ -43,12 +43,15 @@ def index():
 
 @app.route("/timeline")
 def tijdslijn():
-    json_data = 
     return render_template('timeline.html')
 
 @app.route("/frans")
 def french():
     return render_template('frans.html')
+
+@app.route("/test")
+def testing():
+    return render_template('test.html')
 
 if __name__ == "__main__":
     main()

@@ -6,6 +6,7 @@ db = SQLAlchemy()
 class Event(db.Model):
     __tablename__ = 'events'
     id = db.Column(db.Integer, primary_key=True)
+    userid =  db.Column(db.Integer, unique=False, nullable =True)
     year = db.Column(db.Integer, unique=False, nullable =True)
     month = db.Column(db.Integer, unique=False, nullable =True)
     day = db.Column(db.Integer, unique=False, nullable =True)
@@ -17,3 +18,10 @@ class Event(db.Model):
     displaydate = db.Column(db.Integer, unique=False, nullable =True)
     text = db.Column(db.String)
     headline = db.Column(db.String)
+
+class User(UserMixin, db.Model):
+    __tablename__ = 'users'
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(128), unique=True, nullable =False)
+    password = db.Column(db.String(128))
+    trust = db.Column(db.Boolean) # Fix this one

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Test Page</title>
+
+    <link title="timeline-styles" rel="stylesheet"
+        href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+{% endblock %}
+
+{% block body %}
+
+<script type="text/javascript">
+    function make_the_json () {
+            
+            const jsonData = { 
+                events: [
+                    {
+                        "media": {
+                        "url": "",
+                        "caption": "",
+                        "credit": ""
+                        },
+                        "start_date": {
+                        "month": "4",
+                        "day": "30",
+                        "year": "2021"
+                        },
+                        "text": {
+                        "headline": "The first local JSON appears on the timeline",
+                        "text": "<p>After a lot of effort and frustration, I asked Kiara for elp and she found out how to feed JSON to the timeline.</p>"
+                        }
+                    },
+                ]
+            };
+        return jsonData;
+    };
+
+</script>
+
+<script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
+<div id='timeline-embed' style="width: 100%; height: 600px"></div>
+
+
+<script type="text/javascript">
+    // make_the_json() is some javascript function you've written
+    // which creates the appropriate JSON configuration
+    var timeline_json = make_the_json();
+        window.timeline = new TL.Timeline('timeline-embed', timeline_json);
+</script>
+{% endblock %}
