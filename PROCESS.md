@@ -63,3 +63,6 @@ It calls for many changes to the current DESIGN.md file as I can make a more dir
 - A function will take all these events from the postgreSQL database, translate them into JSON and a next function will diplay them.
 
 I added some code from a previous project as a start to the login system, but haven't finished it yet.
+
+# May 3rd
+should I use $ set instead of $ export?

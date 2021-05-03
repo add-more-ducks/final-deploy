@@ -53,11 +53,94 @@ Migrate(app, db)
     # might need to change to return User.get(user_id)
 #    return User.query.get(int(user_id))
 
+# From youtube tutorial pt2. 
+
+posts = [
+            {
+                "media": {
+                "url": "",
+                "caption": "",
+                "credit": ""
+                },
+                "start_date": {
+                "month": "4",
+                "day": "30",
+                "year": "2021"
+                },
+                "text": {
+                "headline": "The first local JSON appears on the timeline",
+                "text": "<p>After a lot of effort and frustration, I asked Kiara for elp and she found out how to feed JSON to the timeline.</p>"
+                }
+            },
+            {
+                "media": {
+                "url": "",
+                "caption": "",
+                "credit": ""
+                },
+                "start_date": {
+                "month": "",
+                "day": "",
+                "year": "2019"
+                },
+                "end_date": {
+                "month": "",
+                "day": "",
+                "year": "2022"
+                },
+                "text": {
+                "headline": "Start of Covid19",
+                "text": ""
+                }
+            },
+            {
+                "media": {
+                "url": "",
+                "caption": "",
+                "credit": "",
+                "thumbnail": "",
+                "alt": "",
+                "title": "",
+                "link": "",
+                "link_target": ""
+                },
+                "start_date": {
+                "year": "2019",
+                "month": "",
+                "day": "",
+                "hour": "",
+                "minute": "",
+                "second": "",
+                "millisecond": "",
+                "display_date": ""
+                },
+                "end_date": {
+                "year": "2020",
+                "month": "",
+                "day": "",
+                "hour": "",
+                "minute": "",
+                "second": "",
+                "millisecond": "",
+                "display_date": ""
+                },
+                "text": {
+                "headline": "Start of Covid19",
+                "text": ""
+                }
+            }
+        ]
+
 
 # Display the homepage
 @app.route("/")
 def index():
     return render_template('index.html')
+
+@app.route("/about")
+def about():
+    return render_template('about.html', posts=posts)
+
 
 # Get called from register.js to verify uniqueness of new username
 @app.route('/confirmation', methods=['POST'])
@@ -129,5 +212,12 @@ def french():
 def testing():
     return render_template('test.html')
 
+
+# main starting command
 if __name__ == "__main__":
-    main()
+#    main()
+# The above line works. Can run instead of the one below.
+    app.run(debug=True)
+
+# call with: $ python application.py 
+# instead of flask run
