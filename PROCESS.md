@@ -72,3 +72,10 @@ Decided against it.
 Created a login layout based on the instructions by Corey Schafer.
 This replaces my old design from the pizza.py project, but it is much more user-friendly.
 source: https://youtu.be/UIJKdCIEXUQ
+
+Note for later: email-validator was changed in April 2020. 
+May need to use: 'pip install email_validator'
+
+Started working on the 'User'class/model. 
+
+

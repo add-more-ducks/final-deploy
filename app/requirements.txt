@@ -1,4 +1,4 @@
-email_validator
+email-validator
 Flask
 Flask-Session
 WTForms
