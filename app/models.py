@@ -3,11 +3,38 @@ from flask_login import LoginManager, UserMixin
 
 db = SQLAlchemy()
 
+class User(UserMixin, db.Model):
+    __tablename__ = 'users'
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(20), unique=True, nullable =False)
+    email = db.Column(db.String(120), unique=True, nullable =False)
+    image_file = db.Column(db.String(20), nullable=False, default='default.jpg')
+    password = db.Column(db.String(60), nullable=False)
+    #left off here 
+    events = db.relationship('Event')
+
+    def __repr__(self):
+        return f"User('{self.username}', '{self.email}', '{self.image_file}')"
+
 class Event(db.Model):
     __tablename__ = 'events'
     id = db.Column(db.Integer, primary_key=True)
-    userid =  db.Column(db.Integer, unique=False, nullable =True)
-    year = db.Column(db.Integer, unique=False, nullable =True)
+    headline = db.Column(db.String(100), nullable=False)
+    text = db.Column(db.Text, nullable=False)
+    year = db.Column(db.Integer, nullable =False)
+    date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+
+    def __repr__(self):
+        return f"Event('{self.year}', '{self.headline}')"
+
+
+
+
+
+
+"""
+    Parts of the Event Class
+
     month = db.Column(db.Integer, unique=False, nullable =True)
     day = db.Column(db.Integer, unique=False, nullable =True)
     time = db.Column(db.Integer, unique=False, nullable =True)
@@ -16,12 +43,5 @@ class Event(db.Model):
     endday = db.Column(db.Integer, unique=False, nullable =True)
     endtime = db.Column(db.Integer, unique=False, nullable =True)
     displaydate = db.Column(db.Integer, unique=False, nullable =True)
-    text = db.Column(db.String)
-    headline = db.Column(db.String)
-
-class User(UserMixin, db.Model):
-    __tablename__ = 'users'
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(128), unique=True, nullable =False)
-    password = db.Column(db.String(128))
-    trust = db.Column(db.Boolean) # Fix this one
+    userid =  db.Column(db.Integer, unique=False, nullable =True)
+"""

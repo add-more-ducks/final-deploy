@@ -228,15 +228,15 @@ def logout():
 
 
 @app.route("/timeline")
-def tijdslijn():
+def timeline():
     return render_template('timeline.html')
 
-@app.route("/frans")
+@app.route("/french")
 def french():
     return render_template('frans.html')
 
 @app.route("/test")
-def testing():
+def test():
     return render_template('test.html')
 
 
