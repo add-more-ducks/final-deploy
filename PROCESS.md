@@ -66,3 +66,9 @@ I added some code from a previous project as a start to the login system, but ha
 
 # May 3rd
 should I use $ set instead of $ export?
+Decided against it.
+
+# May 7th
+Created a login layout based on the instructions by Corey Schafer.
+This replaces my old design from the pizza.py project, but it is much more user-friendly.
+source: https://youtu.be/UIJKdCIEXUQ

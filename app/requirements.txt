@@ -1,5 +1,7 @@
+email_validator
 Flask
 Flask-Session
+WTForms
 psycopg2-binary
 SQLAlchemy
 requests

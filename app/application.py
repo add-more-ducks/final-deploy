@@ -3,7 +3,7 @@ Thomas van Genderen - Spring 2021
 Main application file
 '''
 
-from flask import Flask, session, redirect, url_for, render_template, request, jsonify
+from flask import Flask, session, redirect, url_for, render_template, request, jsonify, flash
 from flask_session import Session
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -11,6 +11,8 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 from flask_socketio import SocketIO, emit
+# refers to forms.py
+from forms import RegistrationForm, LoginForm
 from markupsafe import escape
 import os
 
@@ -36,8 +38,9 @@ Session(app)
 # Configure migrations
 Migrate(app, db)
 
-# for integrating admin section (webapp site UvA)
-#app.secret_key = os.environ['SECRET_KEY']
+# for integrating admin section (webapp site UvA) 
+# different in tutorial
+app.secret_key = os.environ['SECRET_KEY']
 #admin = Admin(app, name='Timeline Admin', template_mode='bootstrap3')
 #admin.add_view(ModelView(User, db.session))
 #admin.add_view(ModelView(Item, db.session))
@@ -139,7 +142,7 @@ def index():
 
 @app.route("/about")
 def about():
-    return render_template('about.html', posts=posts)
+    return render_template('about.html', posts=posts, titl='about')
 
 
 # Get called from register.js to verify uniqueness of new username
@@ -154,10 +157,18 @@ def confirmation():
     
     return jsonify({'success': True})
 
+
 # Create a new User object or just display the page for user to input data
-@app.route("/register", methods=["GET", "POST"])
+@app.route("/register", methods=['GET', 'POST'])
 def register():
-    
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        flash(f'Account created for {form.username.data}!', 'success')
+        return redirect(url_for('index'))
+#    if form.validate_on_submit()
+    return render_template('register.html', title='Register', form=form)
+
+"""    
     # ensure no current session
     session.clear()
 
@@ -176,11 +187,27 @@ def register():
         
         return render_template('/login.html')
 
+
 # Display input page for loggin in
 # from https://flask-login.readthedocs.io/en/latest/#installation
 @app.route('/login', methods=['GET'])
 def login():
     return render_template("/login.html")
+
+"""
+# Create a new User object or just display the page for user to input data
+@app.route("/login", methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        # temporary verification requirements CHANGE THIS
+        if form.email.data == 'admin@blog.com' and form.password.data == 'password':
+            flash('You have been logged in!', 'success')
+            return redirect(url_for('index'))
+        else:
+            flash('Login Unsuccesful. Please check username and password', 'danger')        
+    return render_template('login.html', title='Login', form=form)
+
 
 # Log user in if input is adequate
 @app.route('/logmein', methods = ['POST'])
