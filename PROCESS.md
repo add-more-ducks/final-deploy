@@ -78,4 +78,7 @@ May need to use: 'pip install email_validator'
 
 Started working on the 'User'class/model. 
 
+# May 8th
+As I am making the structure for my Event-table, I wonder: should I use relationships to subdevide characteristics for the Events? E.g. Enddate will be its own table so i can just ask: if not event.endate: and continue from there.
 
+I also get some error warnings for my db. lines. it seems VS thinks there is no database available? This might result in errors later.

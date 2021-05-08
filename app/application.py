@@ -14,7 +14,6 @@ from flask_socketio import SocketIO, emit
 # refers to forms.py
 from forms import RegistrationForm, LoginForm
 from markupsafe import escape
-import os
 
 from models import *
 
@@ -58,6 +57,7 @@ app.secret_key = os.environ['SECRET_KEY']
 
 # From youtube tutorial pt2. 
 
+"""
 posts = [
             {
                 "media": {
@@ -133,7 +133,7 @@ posts = [
                 }
             }
         ]
-
+"""
 
 # Display the homepage
 @app.route("/")
