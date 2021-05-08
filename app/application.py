@@ -4,6 +4,8 @@ Main application file
 '''
 
 from flask import Flask, session, redirect, url_for, render_template, request, jsonify, flash
+# newest addition
+import bcrypt
 from flask_session import Session
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate

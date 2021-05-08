@@ -1,5 +1,8 @@
+bcrypt
+flask-bcrypt
 email-validator
 Flask
+Flask-Bcrypt
 flask-migrate
 Flask-Session
 psycopg2-binary

@@ -82,3 +82,18 @@ Started working on the 'User'class/model.
 As I am making the structure for my Event-table, I wonder: should I use relationships to subdevide characteristics for the Events? E.g. Enddate will be its own table so i can just ask: if not event.endate: and continue from there.
 
 I also get some error warnings for my db. lines. it seems VS thinks there is no database available? This might result in errors later.
+
+I chose not to create a separate init.py file as I don't want to fix something that isn't broken yet.
+
+Note for later: got errors on requirements.txt.
+ERROR: Could not find a version that satisfies the requirement oauth2client.service_account (from versions: none)
+ERROR: No matching distribution found for oauth2client.service_account
+
+^needs replacement?
+
+Planning on using flask_bcrypt for encryption of passwords.
+
+I got a weird error due toi bcrypt.
+solution: run the following line in your enviroment before running the application.py:
+"$ pip install bcrypt"
+
