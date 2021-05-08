@@ -5,7 +5,7 @@ Main application file
 
 from flask import Flask, session, redirect, url_for, render_template, request, jsonify, flash
 # newest addition
-import bcrypt
+from flask_bcrypt import Bcrypt
 from flask_session import Session
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -13,8 +13,8 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 from flask_socketio import SocketIO, emit
-# refers to forms.py
-from forms import RegistrationForm, LoginForm
+# refers to forms.py. Always import your new forms!!!!
+from forms import RegistrationForm, LoginForm, PostForm
 from markupsafe import escape
 
 from models import *
@@ -42,20 +42,23 @@ Migrate(app, db)
 # for integrating admin section (webapp site UvA) 
 # different in tutorial
 app.secret_key = os.environ['SECRET_KEY']
-#admin = Admin(app, name='Timeline Admin', template_mode='bootstrap3')
-#admin.add_view(ModelView(User, db.session))
-#admin.add_view(ModelView(Item, db.session))
+admin = Admin(app, name='Timeline Admin', template_mode='bootstrap3')
+admin.add_view(ModelView(User, db.session))
+admin.add_view(ModelView(Event, db.session))
 
-# Configure login_manager
-#login_manager = LoginManager()
-#login_manager.init_app(app)
-#login_manager.login_view = 'login'
-#login_manager.login_message = 'You really need to log in!'
+#Configure login_manager
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'
+login_manager.login_message = 'You really need to log in!'
 
-#@login_manager.user_loader
-#def load_user(user_id):
+@login_manager.user_loader
+def load_user(user_id):
     # might need to change to return User.get(user_id)
-#    return User.query.get(int(user_id))
+    return User.query.get(int(user_id))
+
+# From youtube tutorial pt6. 
+bcrypt = Bcrypt(app)
 
 # From youtube tutorial pt2. 
 
@@ -165,9 +168,12 @@ def confirmation():
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
+        hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
+        user = User(username=form.username.data, email=form.email.data, password=hashed_password)
+        db.session.add(user)
+        db.session.commit()
         flash(f'Account created for {form.username.data}!', 'success')
         return redirect(url_for('index'))
-#    if form.validate_on_submit()
     return render_template('register.html', title='Register', form=form)
 
 """    
@@ -241,12 +247,23 @@ def french():
 def test():
     return render_template('test.html')
 
+# 
+@app.route('/post/new', methods=['GET', 'POST'])
+#@login_required 
+def new_post():
+    form = PostForm()
+    if form.validate_on_submit():
+        flash('Your post has been created (fake)!', 'success')
+        return redirect(url_for('index'))
+    return render_template('create_post.html', title='New Post', form=form)
+
+
 
 # main starting command
 if __name__ == "__main__":
-#    main()
+    main()
 # The above line works. Can run instead of the one below.
-    app.run(debug=True)
+#    app.run(debug=True)
 
 # call with: $ python application.py 
 # instead of flask run

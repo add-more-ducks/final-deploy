@@ -95,5 +95,5 @@ Planning on using flask_bcrypt for encryption of passwords.
 
 I got a weird error due toi bcrypt.
 solution: run the following line in your enviroment before running the application.py:
-"$ pip install bcrypt"
+"$ pip install flask-bcrypt"
 
